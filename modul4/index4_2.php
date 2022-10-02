@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>Page Title</title>
@@ -15,8 +15,7 @@
   <option value="kvinne">kvinne</option>
   <option value="mann">mann</option>
   <option value="annet">annet</option>
-</select>
-kjønn<br>
+</select> kjønn<br>
 <input required type="text" name="occupation"> yrke<br>
 <button type="submit" name="sendInfo">send inn!</button>
 </form>
