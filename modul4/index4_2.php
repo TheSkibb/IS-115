@@ -5,12 +5,12 @@
 </head>
 <body>
 
-<form action="" method="post">
+<form action="index4_2.php" method="post">
 <input required type="text" name="name"> fornavn<br>
 <input required type="tel" name="phone" placeholder="(+47)" pattern="[0-9]{3} [0-9]{2} [0-9]{3}"> telefon nummer (format: 123 45 678)<br>
 <input required type="email" name="mail"> mail test<br>
 <input required type="date" name="dob"> fødselsdato<br>
-<select required name="gender"> 
+<select required name="gender" > 
   <option value="" selected disabled hidden>velg ...</option>
   <option value="kvinne">kvinne</option>
   <option value="mann">mann</option>
@@ -27,8 +27,8 @@ if(isset($_REQUEST['sendInfo'])){
     'name' =>$_REQUEST['name'], 
     'phone' =>$_REQUEST['phone'], 
     'mail' =>$_REQUEST['mail'], 
-    'dob' =>$_REQUEST['gender'], 
-    'gender' =>$_REQUEST['dob'], 
+    'gender' =>$_REQUEST['gender'], 
+    'dob' =>$_REQUEST['dob'], 
     'occupation' =>$_REQUEST['occupation']
   );
 

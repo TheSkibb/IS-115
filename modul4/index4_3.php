@@ -31,16 +31,14 @@ function isSelected($kjonn, $selected){
 }
 
 if(isset($_REQUEST['sendInfo'])){
-  
   $changed = false;
-  for($i = 0; $i < count($info); $i++){
-    if(array_values($info)[$i] != array_values($_REQUEST)[$i]){
-      $changed = true;
-    }
-    $info[array_keys($info)[$i]] = $_REQUEST[array_keys($info)[$i]];
+  $sendInfo=array_pop($_REQUEST);
+  if($_REQUEST != $info){
+    $info = $_REQUEST;
+    $changed = true;
   }
+  $_REQUEST['sendInfo'] = $sendInfo;
 }
-
 ?>
 
 <form action="index4_3.php" method="post">
@@ -58,8 +56,8 @@ if(isset($_REQUEST['sendInfo'])){
 <button type="submit" name="sendInfo">send inn!</button>
 </form>
 
-
 <?php
+
 if(isset($_REQUEST['sendInfo'])){
   if($changed){
     echo '<h1>Hei ' . $info['name'] . '! </h1>
@@ -74,8 +72,8 @@ if(isset($_REQUEST['sendInfo'])){
     echo 'du har ikke gjort noen endringer';
   }
 }
-?>
 
+?>
 
 </body>
 </html> 
