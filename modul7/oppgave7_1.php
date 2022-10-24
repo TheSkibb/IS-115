@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+<style>
+  table{
+    border: 1px solid black;
+  }
+</style>
+  <body>
+    <?php
+include('./database.inc.php');
+
+$sql = "select * from annonser";
+
+$sp = $pdo->prepare($sql);
+
+$eier = 'kristian';
+
+try{
+  $sp->execute();
+}
+catch(PDOException $e){
+  echo $e->getMessage() . "<br>";
+}
+
+echo "<table>
+<th>eier</th>
+<th>leie</th>
+<th>adresse</th>
+";
+$annonser = $sp->fetchAll(PDO::FETCH_OBJ);
+if($sp->rowCount() > 0){
+  foreach($annonser as $annonse){
+    echo "<tr>" .
+      "<td>" . $annonse->eier . "</td>" .
+      "<td>" . $annonse->leie . "</td>" .
+      "<td>" . $annonse->address . "</td>";
+  }
+}
+echo "</table>";
+
+?>
+  </body>
+</html>
