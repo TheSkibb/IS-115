@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Page Title</title>
+    <title>7 3</title>
   </head>
   <body>
     <?php
-//vist i intervju
+
+echo "vist i intervju";
 
 ?>
   </body>
