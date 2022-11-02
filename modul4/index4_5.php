@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>Page Title</title>
@@ -42,7 +42,7 @@ function game(&$deltakere){
 
 //tar imot et array av deltakere og gir dem en tilfeldig poengsum mellom 1 og 50
 function giveRandomNumbers(&$deltakere){
-  foreach($deltakere as &$score){
+ foreach($deltakere as &$score){
     $score = rand(0, 50);
   }
 }

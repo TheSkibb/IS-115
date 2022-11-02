@@ -28,7 +28,7 @@ class Bruker{
     $this->fornavn = $fornavn;
     $this->etternavn = $etternavn;
     $this->brukernavn = self::genererBrukerNavn(5);
-    $registreringsDato = new DateTime();
+    $this->registreringsDato = new DateTime();
   }
 
   private static function genererBrukerNavn($n) {
@@ -63,8 +63,23 @@ class Bruker{
   }
 }
 
-$ola = new Bruker('Ola', 'Nordmann');
-$kari = new Bruker('Kari', 'Olsen');
+class Student extends Bruker{
+  function getUserInfo(){
+    return array(
+      'fornavn'=>$this->fornavn, 
+      'etternavn'=>$this->etternavn, 
+      'registreringsDato'=>$this->registreringsDato
+    );
+  }
+}
+
+
+
+$ola = new Student('Ola', 'Nordmann');
+$kari = new Student('Kari', 'Olsen');
+
+print_r($ola->getUserInfo());
+print_r($kari->getUserInfo());
 
 unset($ola);
 unset($kari);

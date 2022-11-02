@@ -1,6 +1,6 @@
-path="$PHP/modul4"
+modul=modul8
 
-rm -r $path
-cp -r ./modul4 $path
+sudo rm -rf /opt/lampp/htdocs/$modul
+sudo cp -r ./$modul /opt/lampp/htdocs/$modul
 
 echo "files copied to $path"

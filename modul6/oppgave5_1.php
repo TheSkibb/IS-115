@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>Page Title</title>
@@ -24,10 +24,10 @@ class Bruker{
   var $registreringsDato;
 
   function setUserInfo($inpFornavn, $inpEtternavn, $inpBrukernavn, $inpRegistreringsDato){
-  $fornavn = $inpFornavn;
-  $etternavn = $inpEtternavn;
-  $brukernavn = $inpBrukernavn;
-  $registreringsDato = $inpRegistreringsDato;
+    $fornavn = $inpFornavn;
+    $etternavn = $inpEtternavn;
+    $brukernavn = $inpBrukernavn;
+    $registreringsDato = $inpRegistreringsDato;
   }
 
   function getUserInfo(){

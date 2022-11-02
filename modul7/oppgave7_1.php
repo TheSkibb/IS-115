@@ -16,8 +16,6 @@ $sql = "select * from annonser";
 
 $sp = $pdo->prepare($sql);
 
-$eier = 'kristian';
-
 try{
   $sp->execute();
 }
@@ -36,7 +34,8 @@ if($sp->rowCount() > 0){
     echo "<tr>" .
       "<td>" . $annonse->eier . "</td>" .
       "<td>" . $annonse->leie . "</td>" .
-      "<td>" . $annonse->address . "</td>";
+      "<td>" . $annonse->address . "</td>" .
+      "</tr>";
   }
 }
 echo "</table>";

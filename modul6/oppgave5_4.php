@@ -48,6 +48,7 @@ Class ChatRom{
 
   //param: $bruker Bruker
   //funksjon for å sjekke om en bruker har tilgang til chatrommet
+  //return: boolean
   public function harTilgang($bruker){
   }
 
